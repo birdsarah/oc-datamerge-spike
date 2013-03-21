@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opencontract-organizations>
+   <opencontract-organization>
+      <contact>
+         <country>Country of organization</country>
+         <email>The contact email address, if available. May be repeated for multiple addresses.</email>
+         <legal-representative>Name of legal representative for contracts</legal-representative>
+         <mailing-address>The contact mailing address, if available.</mailing-address>
+         <person-name>The name of the contact person at the organisation.</person-name>
+         <region>State/Region/District of organization - as appropriate</region>
+         <telephone>The contact telephone number, if available. May be repeated for multiple numbers.</telephone>
+         <url>Website of organization</url>
+      </contact>
+      <currency>Primary currency of organization.</currency>
+      <id>Organization ID - unique using a mechanism similar to IATI org ID</id>
+      <language>Language</language>
+      <name>Plain english name of the organization / department</name>
+   </opencontract-organization>
+</opencontract-organizations>
