@@ -52,7 +52,7 @@
             }],
             "contract": [{
                 "awarded-contract-document-id": "ID of contract document",
-                "signatory-name": [ "List of names of all contract signatories" ]
+                "signatory-name": [ "List of names of all contract signatories" ],
                 "recipient": {
                     "opencontract-organization-id": {
                     "@organization-type": "Indicates whether organization is a contracting or supplier. Optional. In the meta data this should always be a contracting organization and in the award a supplier.",
