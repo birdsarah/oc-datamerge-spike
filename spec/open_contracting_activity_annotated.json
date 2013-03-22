@@ -104,24 +104,3 @@
         }]
     }
 }
-
-{
-    "opencontract-organization": {
-        "id": "Organization ID - unique using a mechanism similar to IATI org ID",
-        "name": "Plain english name of the organization / department",
-        "contact": {
-            "person-name": "The name of the contact person at the organisation.",
-            "telephone": "The contact telephone number, if available. May be repeated for multiple numbers.",
-            "email": "The contact email address, if available. May be repeated for multiple addresses.",
-            "mailing-address": "The contact mailing address, if available.",
-            "region": "State/Region/District of organization - as appropriate",
-            "country": "Country of organization",
-            "url": "Website of organization",
-            "legal-representative": "Name of legal representative for contracts",
-        },
-        "currency": "Primary currency of organization.",
-        "language": "Language",
-    }
-}
-
-
