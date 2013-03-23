@@ -1,0 +1,227 @@
+{
+    "@LG": "opencontract-organization['language']", 
+    "@CATEGORY": "None", 
+    "@FORM": "None", 
+    "SYSTEM": {
+        "SYSTEM_NOTICE_STATE_CHANGE_DATE": "opencontract-activity['meta']['@last-updated-datetime']", 
+        "SYSTEM_ADDITIONAL": {
+            "OTHER_LANGUAGE_FIELDS": {
+                "REASON_FOR_REPLACEMENT_OR_RETRACTION": "None", 
+                "CRITERIA_DEFINITION": "None", 
+                "TITLE_CONTRACT": "None", 
+                "OTHER_LANGUAGE_VALUE": "None", 
+                "SHORT_CONTRACT_DESCRIPTION": "None", 
+                "LOCATION_ADDITIONAL_FREE_TEXT": "None", 
+                "RECEIPT_LIMIT_DATE_FOR": "None", 
+                "HOW_TO_APPLY": "None"
+            }, 
+            "DELIVERY_LOCATION": {
+                "TOWN": "None", 
+                "COUNTY": "None", 
+                "POSTAL_CODE": "None", 
+                "COUNTRY": "None"
+            }
+        }, 
+        "BUYER_GROUP_ID": "opencontract-organization['id']", 
+        "NOTICE_TYPE_FRIENDLY_NAME": "None", 
+        "SOURCE_SYSTEM": {
+            "PROVIDER_CONTRACT_ID": "None", 
+            "PUBLISHED_ON_SOURCE_DATE": {
+                "YEAR": "None", 
+                "DAY": "None", 
+                "MONTH": "None"
+            }, 
+            "PROVIDER_CONTRACT_URL": "None", 
+            "PARENT_PROVIDER_CONTRACT_ID": "None", 
+            "SOURCE_NAME": "None"
+        }, 
+        "NOTICE_GROUP": "None", 
+        "BUYER_GROUP_NAME": "opencontract-organization['name']", 
+        "NOTICE_TYPE": "None", 
+        "NOTICE_STATE": "None", 
+        "SYSTEM_NOTICE_STATE": "None", 
+        "PARENT_NOTICE_ID": "None", 
+        "SYSTEM_PUBLISHED_DATE": "opencontract-activity['@generated-datetime']", 
+        "ROOT_NOTICE_ID": "None", 
+        "NOTICE_ID": "opencontract-activity['meta']['opencontract-id']"
+    }, 
+    "FD_CONTRACT": {
+        "DOCUMENTS": {
+            "DOCUMENT": [{
+                "DOCUMENT_TITLE": "opencontract-activity['document']['title']", 
+                "DOCUMENT_URL": "opencontract-activity['document']['url']"
+            }]
+        }, 
+        "REASON_FOR_REPLACEMENT_OR_RETRACTION": "None", 
+        "@CTYPE": "opencontract-activity['meta']['category']", 
+        "COMPLEMENTARY_INFORMATION_CONTRACT_NOTICE": {
+            "NOTICE_DISPATCH_DATE": {
+                "YEAR": "None", 
+                "DAY": "None", 
+                "MONTH": "None"
+            }, 
+            "NO_RECURRENT_PROCUREMENT": "None", 
+            "RELATES_TO_EU_PROJECT_YES": "None", 
+            "ADDITIONAL_INFORMATION": "None", 
+            "RELATES_TO_EU_PROJECT_NO": "None"
+        }, 
+        "CONTRACTING_AUTHORITY_INFORMATION": {
+            "TYPE_AND_ACTIVITIES_AND_PURCHASING_ON_BEHALF": {
+                "PURCHASING_ON_BEHALF": {
+                    "@VALUE": "opencontract-activity['bid']['procuring-on-behalf']"
+                }, 
+                "TYPE_AND_ACTIVITIES": {
+                    "TYPE_OF_CONTRACTING_AUTHORITY_OTHER": {
+                        "@VALUE": "None"
+                    }
+                }
+            }, 
+            "NAME_ADDRESSES_CONTACT_CONTRACT": {
+                "INTERNET_ADDRESSES_CONTRACT": {
+                    "URL_GENERAL": "opencontract-activity['meta']['url']", 
+                    "URL_BUYER": "opencontract-organization['contact']['url']"
+                }, 
+                "CA_CE_CONCESSIONAIRE_PROFILE": {
+                    "TOWN": "None", 
+                    "FAX": "None", 
+                    "COUNTRY": {
+                        "@VALUE": "opencontract-organization['contact']['country']"
+                    }, 
+                    "ORGANISATION": "None", 
+                    "E_MAIL": "opencontract-organization['contact']['email']", 
+                    "COUNTY": "opencontract-organization['contact']['region']", 
+                    "PHONE": "opencontract-organization['contact']['telephone']", 
+                    "POSTAL_CODE": "None", 
+                    "ADDRESS": "opencontract-organization['contact']['mailing-address']", 
+                    "CONTACT_POINT": "opencontract-organization['contact']['person-name']"
+                }
+            }
+        }, 
+        "PROCEDURE_DEFINITION_CONTRACT_NOTICE": {
+            "IS_FLAGGED_AS_SME_FRIENDLY": "opencontract-activity['bid']['sme-friendly']", 
+            "IS_FLAGGED_AS_VCS_FRIENDLY": "None", 
+            "AWARD_CRITERIA_CONTRACT_NOTICE_INFORMATION": {
+                "AWARD_CRITERIA_DETAIL": "opencontract-activity['award']['selection-method']"
+            }, 
+            "NATURE_OF_PROCUREMENT": {
+                "OTHER_DESCRIPTION": "None", 
+                "DESCRIPTION": "None"
+            }, 
+            "TYPE_OF_PROCEDURE": {
+                "TYPE_OF_PROCEDURE_DETAIL_FOR_CONTRACT_NOTICE": {
+                    "PT_OPEN": "None"
+                }
+            }, 
+            "ADMINISTRATIVE_INFORMATION_CONTRACT_NOTICE": {
+                "RECEIPT_LIMIT_DATE": {
+                    "YEAR": "opencontract-activity['bid']['date-closing']", 
+                    "TIME": "None", 
+                    "RECEIPT_LIMIT_DATE_FOR": "None", 
+                    "DAY": "opencontract-activity['bid']['date-closing']", 
+                    "MONTH": "opencontract-activity['bid']['date-closing']"
+                }, 
+                "PREVIOUS_PUBLICATION_INFORMATION_NOTICE_F2": {
+                    "PREVIOUS_PUBLICATION_EXISTS_F2": "None", 
+                    "NO_PREVIOUS_PUBLICATION_EXISTS_F2": "None"
+                }, 
+                "FILE_REFERENCE_NUMBER": "None", 
+                "LANGUAGE": {
+                    "LANGUAGE_EC": {
+                        "@VALUE": "None"
+                    }
+                }
+            }
+        }, 
+        "OBJECT_CONTRACT_INFORMATION": {
+            "QUANTITY_SCOPE": {
+                "NO_OPTIONS": "None", 
+                "NATURE_QUANTITY_SCOPE": {
+                    "COSTS_RANGE_AND_CURRENCY": {
+                        "@CURRENCY": "opencontract-activity['meta']['currency']", 
+                        "RANGE_VALUE_COST": {
+                            "HIGH_VALUE": "opencontract-activity['bid']['total-budget']", 
+                            "LOW_VALUE": "opencontract-activity['bid']['total-budget']"
+                        }
+                    }
+                }
+            }, 
+            "DESCRIPTION_CONTRACT_INFORMATION": {
+                "TYPE_CONTRACT_LOCATION": {
+                    "TYPE_SUPPLIES_CONTRACT": {
+                        "@VALUE": "None"
+                    }, 
+                    "TYPE_WORK_CONTRACT": {
+                        "@VALUE": "None"
+                    }, 
+                    "TYPE_CONTRACT": {
+                        "@VALUE": "None"
+                    }, 
+                    "SERVICE_CATEGORY": {
+                        "@VALUE": "None"
+                    }
+                }, 
+                "F02_FRAMEWORK": {
+                    "DURATION_FRAMEWORK_YEAR": "None", 
+                    "SINGLE_OPERATOR": "None", 
+                    "DURATION_FRAMEWORK_MONTH": "None", 
+                    "TOTAL_ESTIMATED": {
+                        "COSTS_RANGE_AND_CURRENCY": {
+                            "@CURRENCY": "None", 
+                            "RANGE_VALUE_COST": {
+                                "HIGH_VALUE": "None", 
+                                "LOW_VALUE": "None"
+                            }
+                        }
+                    }
+                }, 
+                "TITLE_CONTRACT": "opencontract-activity['meta']['title']", 
+                "LOCATION_NUTS": {
+                    "LAU": {
+                        "@CODE": "opencontract-activity['meta']['performance-location']"
+                    }, 
+                    "SITE_OR_LOCATION": {
+                        "LABEL": {
+                            "p": "opencontract-activity['meta']['performance-location']"
+                        }
+                    }, 
+                    "NUTS": {
+                        "@CODE": "opencontract-activity['meta']['performance-location']"
+                    }
+                }, 
+                "SHORT_CONTRACT_DESCRIPTION": "opencontract-activity['meta']['description']", 
+                "NOTICE_INVOLVES": {
+                    "FRAMEWORK_STAGE": "None", 
+                    "@VALUE": "None"
+                }, 
+                "CPV": {
+                    "CPV_ADDITIONAL": "None", 
+                    "CPV_MAIN": {
+                        "CPV_CODE": {
+                            "@CODE": "opencontract-activity['bid']['cpv']"
+                        }
+                    }
+                },
+            }, 
+            "PERIOD_WORK_DATE_STARTING": {
+                "MONTHS": "opencontract-activity['bid']['contract-term']", 
+                "DAYS": "opencontract-activity['bid']['contract-term']", 
+                "INTERVAL_DATE": {
+                    "START_DATE": {
+                        "YEAR": "opencontract-activity['bid']['date-work-commence-scheduled']", 
+                        "DAY": "opencontract-activity['bid']['date-work-commence-scheduled']", 
+                        "MONTH": "opencontract-activity['bid']['date-work-commence-scheduled']"
+                    }, 
+                    "END_DATE": {
+                        "YEAR": "opencontract-activity['bid']['date-work-end-scheduled']", 
+                        "DAY": "opencontract-activity['bid']['date-work-end-scheduled']", 
+                        "MONTH": "opencontract-activity['bid']['date-work-end-scheduled']"
+                    }
+                }
+            }
+        }
+    }, 
+    "@CONTRACTS_FINDER_NOTICE_GROUP": "None", 
+    "@CONTRACTS_FINDER_VERSION": "None", 
+    "_id": "None", 
+    "@VERSION": "None"
+}

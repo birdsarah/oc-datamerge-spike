@@ -1,0 +1,24 @@
+{
+    "wb": {
+        "supplier_country_code": "opencontract-organization['contact']['country']", 
+        "borrower_country_code": "opencontract-organization['contact']['country']", 
+        "project_name": "opencontract-activity['meta']['title']", 
+        "major_sector": "opencontract-activity['meta']['sector']", 
+        "procurement_type": "None", 
+        "region": "None", 
+        "product_line": "opencontract-activity['meta']['line-item']['id']", 
+        "project_id": "opencontract-activity['meta']['opencontract-id']", 
+        "fiscal_year": "None", 
+        "as_of_date": "@generated-datetime", 
+        "supplier_country": "None", 
+        "procurement_method": "opencontract-activity['award']['selection-method']", 
+        "borrower_country": "None", 
+        "borrower_contract_reference": "None", 
+        "procurement_category": "opencontract-activity['meta']['category']", 
+        "supplier": "opencontract-organization['name']", 
+        "contract_signing_date": "opencontract-activity['award']['date-contractsigned']", 
+        "total_contract_amount": "opencontract-activity['award']['total-award']", 
+        "contract_description": "opencontract-activity['meta']['description']", 
+        "wb_contract_number": "opencontract-activity['award']['contract']['awarded-contract-document-id']"
+    }
+}
