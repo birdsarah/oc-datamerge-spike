@@ -39,7 +39,7 @@
                         "opencontract-organization-id": {
                             "@organization-type": "", 
                             "#text": ""
-                        }
+                        },
                     }
                 }
             ], 
@@ -59,15 +59,20 @@
         "meta": {
             "opencontract-organization-contact": "", 
             "category": "", 
+            "sector": "",
             "description": "", 
             "title": "", 
-            "performance-location": "", 
+            "performance-location": {
+                 "@encoding": "",
+                "#text": ""
+            },
             "opencontract-organization-id": {
                 "@organization-type": "", 
                 "#text": ""
             }, 
             "opencontract-id": "", 
             "currency": "", 
+            "url": "",
             "@last-updated-datetime": "", 
             "line-item": [
                 {

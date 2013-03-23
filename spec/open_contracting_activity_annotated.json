@@ -11,13 +11,18 @@
             "opencontract-id": "ID to uniquely identify this contracting activity through the workflow from call -> award -> performance -> completion / termination - similar to IATI activity ID",
             "title": "Short title of contract",
             "description": "Full contract description",
-            "category": "General category of contract - goods, services, etc.",
+            "category": "General category of contract - goods, services, etc. - by code list",
+            "sector": "General contract sector - by code list",
             "line-item": [{
                 "id": "ID used by contracting organziation to identify product or service.",
                 "description": "Description of item",
                 }],
-            "performance-location": "Primary location where goods or services are to be delivered.",
-            "currency": "Contract Currency"
+            "performance-location": {
+                "@encoding": "Location maybe coded e.g. NUTS, zipcode or just plain text - use code list to identify the type of location",
+                "#text": "Primary location where goods or services are to be delivered."
+            },
+            "currency": "Contract Currency",
+            "url": "Link to bid / award / contract information online"
         },
         "bid": {
             "@last-updated-datetime": "DateTime stamp of date this document was last updated.",
