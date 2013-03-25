@@ -1,6 +1,7 @@
 from pymongo import MongoClient
 import xmltodict
 import json
+from csv import DictReader
 
 
 def enter_uk_data(db):
@@ -74,8 +75,48 @@ def enter_ph_data(db):
         bid_json = json.loads(bid)
         ph_collection.contracts.insert(bid_json)
 
+
+def enter_co_data(db):
+    cofieldnames = ['NIVEL',
+                    'ORDEN',
+                    'NIT_ENTIDAD',
+                    'NOMBRE_ENTIDAD',
+                    'TIPO_MODALIDAD',
+                    'NUMERO_CONSTANCIA',
+                    'ID_OBJETO_CONTRATO',
+                    'OBJETO_CONTRATO',
+                    'DETALLE_OBJETO',
+                    'TIPO_CONTRATO',
+                    'CUANTIA',
+                    'VALOR_DEFINITIVO',
+                    'FECHACREACION',
+                    'FECHAESTADOBORRADOR',
+                    'FECHAESTADODESCARTADO',
+                    'FECHAESTADOCONVOCADO',
+                    'FECHAESTADOADJUDICADO',
+                    'FECHAESTADOTERMANORMALDESPCONV',
+                    'FECHAESTADOTERMANORMALDESPCONV_1',
+                    'FECHAESTADOTERMANORMALDESPCONV_2',
+                    'FECHAESTADOTERMANORMALDESPCONV_3',
+                    'ESTADO_PROCESO',
+                    'NOMBRE_CONTRATISTA',
+                    'NIT_CONTRATISTA',
+                    'FECHA_FIRMA_CONTRATO',
+                    'VALOR_CONTRATO',
+                    'VALOR_ADICIONES',
+                    'url']
+
+    co_collection = db.co
+    with open('data/Colombia_data_utf8.csv') as f:
+        codict = DictReader(f, fieldnames=cofieldnames)
+        for row in codict:
+            co_collection.insert(row)
+
+
 if __name__ == '__main__':
     db = MongoClient().wb_datamerge_spike
     enter_uk_data(db)
     enter_wb_data(db)
     enter_ph_data(db)
+    enter_co_data(db)
+
