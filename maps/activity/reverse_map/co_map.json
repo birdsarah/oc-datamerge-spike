@@ -1,7 +1,7 @@
 {
     "CUANTIA": "opencontract-activity['bid']['meta']",
     "DETALLE_OBJETO": "opencontract-activity['meta']['description']",
-    "ESTADO_PROCESO": "opencontract-activity['termination']['termination']['code']",
+    "ESTADO_PROCESO": "opencontract-activity['termination']['termination-code']",
     "FECHACREACION": "opencontract-activity['@generated-datetime']",
     "FECHAESTADOADJUDICADO": "opencontract-activity['award']['date-award']",
     "FECHAESTADOBORRADOR": "None",
