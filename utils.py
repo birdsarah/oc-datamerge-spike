@@ -11,7 +11,7 @@ def writedict(dictionary, filename):
     import json
     with open(filename, 'w') as f:
         f.write(json.dumps(blankdict(dictionary), indent=4))
-        
+
 
 def updatekeys(dictionary, update):
     for k, v in update.iteritems():
@@ -20,12 +20,13 @@ def updatekeys(dictionary, update):
             if type(newdictionary) == list:
                 newdictionary = newdictionary[0]
             if type(newdictionary) == str:
-                continue 
+                continue
             updatekeys(newdictionary, v)
         else:
             if not dictionary.get(k):
                 dictionary[k] = v
-    return dictionary 
+    return dictionary
+
 
 def makekeydict(collection):
     cache = {}
@@ -35,13 +36,13 @@ def makekeydict(collection):
             cache = blankdict(collection.next())
         entry = blankdict(entry)
         updatekeys(entry, cache)
-        cache = entry        
+        cache = entry
     return entry
-    
+
 
 def countnestedkeys(dictionary, countlist=None):
     """
-    Note, this doesn't count keys that are dictionaries inside a list. 
+    Note, this doesn't count keys that are dictionaries inside a list.
     In that case we'd only want to count unique items probably - this gets tricky.
     This will also double count repeats at same level (although that's not valid json)
     """
@@ -50,3 +51,18 @@ def countnestedkeys(dictionary, countlist=None):
     countlist.append(len(dictionary.keys()))
     [countnestedkeys(v, countlist) for k, v in dictionary.iteritems() if type(v) == dict]
     return sum(countlist)
+
+
+def countcommonitems(collection):
+    import collections
+    alldata = defaultdict(list)
+    for record in collection:
+        for k, v in record.iteritems():
+            alldata[k].append(v)
+
+    commonitems = {}
+    for k, v in alldata.iteritems():
+        countitems = collections.Counter(alldata[k])
+        commontemp = {(key, value) for (key, value) in countitems.iteritems() if value > 1}
+        commonitems.update({k: commontemp})
+    return commonitems
