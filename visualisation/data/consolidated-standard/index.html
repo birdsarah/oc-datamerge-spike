@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>Tree Map</title>
-        <script type="text/javascript" src="d3/d3.v3.min.js"></script>
+        <script type="text/javascript" src="/d3/d3.v3.min.js"></script>
         <style>
             svg {
                 margin: 25px 25px 0 25px;
@@ -52,7 +52,7 @@
                 return questioncolor
             }
 
-            d3.json("data/consolidated-standard/alldata.json", function(error, json){
+            d3.json("consolidated/alldata.json", function(error, json){
             
                 var svg = d3.select("body").selectAll("svg")
                     .data(d3.entries(json))
