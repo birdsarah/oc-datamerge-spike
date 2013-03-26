@@ -1,0 +1,131 @@
+{
+    "opencontract-activity": {
+        "bid": {
+            "date-work-end-scheduled": "", 
+            "document-request-list":  
+                {}
+             , 
+            "date-closing": "date_closing", 
+            "procuring-on-behalf": "", 
+            "budget-line-items":  
+                {
+                    "per-unit-budget": "", 
+                    "id": "", 
+                    "quantity": ""
+                }
+             , 
+            "@last-updated-datetime": "", 
+            "sme-friendly": "", 
+            "total-budget": "approved_budget", 
+            "date-opening": "date_published", 
+            "contract-term": "", 
+            "date-clarification": "", 
+            "procurement-type": "procurement_mode", 
+            "date-work-commence-scheduled": "", 
+            "CPV": ""
+        }, 
+        "award": {
+            "selection-method": "", 
+            "date-work-commence-agreed": "", 
+            "total-award": "", 
+            "contract":  
+                {
+                    "signatory-name":  
+                        ""
+                     , 
+                    "awarded-contract-document-id": "", 
+                    "recipient": {
+                        "opencontract-organization-contact": "", 
+                        "opencontract-organization-id": {
+                            "@organization-type": "", 
+                            "#text": ""
+                        }
+                    }
+                }
+             , 
+            "date-work-end-agreed": "", 
+            "@last-updated-datetime": "", 
+            "date-contractsigned": "", 
+            "award-line-items":  
+                {
+                    "per-unit-award": "", 
+                    "id": "", 
+                    "quantity": ""
+                }
+             , 
+            "date-award": ""
+        }, 
+        "@generated-datetime": "", 
+        "meta": {
+            "opencontract-organization-contact": "", 
+            "category": "classification", 
+            "sector": "category",
+            "description": "description", 
+            "title": "title", 
+            "performance-location": {
+                "@encoding": "",
+                "#text": "area_of_delivery"
+            },
+            "opencontract-organization-id": {
+                "@organization-type": "", 
+                "#text": ""
+            }, 
+            "opencontract-id": "ref_number", 
+            "currency": "", 
+            "url": "",
+            "@last-updated-datetime": "last_updated", 
+            "line-item":  
+                {
+                    "id": "", 
+                    "description": ""
+                }
+             
+        }, 
+        "performance": {
+            "date-work-commence-actual": "", 
+            "@last-updated-datetime": "", 
+            "work-item":  
+                {
+                    "date-work-item": "", 
+                    "ref": "", 
+                    "work-item-line-items":  
+                        {
+                            "id": "", 
+                            "quantity": ""
+                        }
+                     , 
+                    "type-work-item": "", 
+                    "description": ""
+                }
+             , 
+            "date-work-end-actual": "", 
+            "payment":  
+                {
+                    "description": "", 
+                    "disbursement-channel": "", 
+                    "value": "", 
+                    "date-transaction": "", 
+                    "currency": "", 
+                    "date-value": "", 
+                    "ref": "", 
+                    "transaction-type": ""
+                }
+             
+        }, 
+        "termination": {
+            "termination-code": "", 
+            "date-termination": "", 
+            "@last-updated-datetime": "", 
+            "termination-description": ""
+        }, 
+        "document":  
+            {
+                "url": "", 
+                "category": "", 
+                "format": "", 
+                "language": "", 
+                "title": ""
+            }
+         
+    }
+}

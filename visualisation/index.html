@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Tree Map</title>
+        <script type="text/javascript" src="d3/d3.v3.min.js"></script>
+        <style>
+            svg {
+                margin: 25px 25px 0 25px;
+                padding: 25px 25px 10px 25px;
+                border: 1px dotted gray;
+                border-radius: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <script type="text/javascript">
+
+            var cellSize = 20,
+                itemsPerColumn = 5,
+                blockheight = cellSize * itemsPerColumn,
+                width = 600,
+                height = 70 + blockheight,
+                //initializes blockx & blockwidth which is used in loops to store prev
+                blockx = 0,
+                blockwidth = 0; 
+
+            function getRow(id) {
+                row =  id % itemsPerColumn;
+                return row;
+            }
+
+            function getColumn(id) {
+                return Math.floor(id / itemsPerColumn);
+            }
+
+            function getBlockWidth(elements) {
+                elementcount = elements.length;
+                numberofcolumns = Math.ceil(elementcount/itemsPerColumn);
+                blockwidth = numberofcolumns * cellSize;
+                return blockwidth
+            }
+
+            function getQuestionColor(question) {
+                questioncolor = "#CCC"
+                if (question['hasmap'] === "True") {
+                    questioncolor = "#6FA2FF";
+                }
+                if (!question.hasOwnProperty('hasmap')) {
+                    questioncolor = "#FFD48E";
+                }
+                return questioncolor
+            }
+
+            d3.json("data/consolidated-standard/alldata.json", function(error, json){
+            
+                var svg = d3.select("body").selectAll("svg")
+                    .data(d3.entries(json))
+                    .enter().append("svg")
+                    .attr("width", width)
+                    .attr("height", height)
+
+                svg.append("text")
+                    .attr("transform", "translate(0, 15)")
+                    .text(function(d) { return d.key.toUpperCase(); });
+                    
+                var questionblock = svg.selectAll(".questionblock")
+                    .data(function(d) { return d.value })
+                    .enter().append("g")
+                    .attr({
+                        "class": (function(d) { return "questionblock" + " " + d.name }),
+                        "transform": (function(d, i) { amount = i*100; return "translate(" + amount +", 25)" })
+                    })
+                
+                questionblock.append("text")
+                    .attr("transform", (function() {var h = blockheight + 25; return "translate(0, " + h +")"; }))
+                    .text(function(d) { var name = d.name; 
+                                         if (name == 'extra') {
+                                            name = '';   
+                                         }
+                                         return name; 
+                                         }
+                         );
+                    
+                questionblock.selectAll(".question")
+                    .data(function(d) { return d.children })
+                    .enter().append("rect")
+                    .attr({
+                        "class": "question",
+                        "x": (function(d, i) { return cellSize*getColumn(i) }),
+                        "y": (function(d, i) { return blockheight - cellSize*(getRow(i)+1) }),
+                        "width": cellSize,
+                        "height": cellSize,
+                        "fill": getQuestionColor,
+                        "stroke": "#fff",
+                        "stroke-weight": "1px"
+                    });
+                
+            });
+        </script>
+    </body>
+</html>
+

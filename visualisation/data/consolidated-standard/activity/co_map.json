@@ -1,0 +1,131 @@
+{
+    "opencontract-activity": {
+        "bid": {
+            "date-work-end-scheduled": "", 
+            "document-request-list":  
+                {}
+             , 
+            "date-closing": "", 
+            "procuring-on-behalf": "", 
+            "budget-line-items":  
+                {
+                    "per-unit-budget": "", 
+                    "id": "", 
+                    "quantity": ""
+                }
+             , 
+            "@last-updated-datetime": "", 
+            "sme-friendly": "", 
+            "total-budget": " 'CUANTIA' ", 
+            "date-opening": " 'FECHAESTADOCONVOCADO' ", 
+            "contract-term": "", 
+            "date-clarification": "", 
+            "procurement-type": "", 
+            "date-work-commence-scheduled": "", 
+            "CPV": ""
+        }, 
+        "award": {
+            "selection-method": "", 
+            "date-work-commence-agreed": "", 
+            "total-award": " 'VALOR_DEFINITIVO' ", 
+            "contract":  
+                {
+                    "signatory-name":  
+                        ""
+                     , 
+                    "awarded-contract-document-id": "", 
+                    "recipient": {
+                        "opencontract-organization-contact": "", 
+                        "opencontract-organization-id": {
+                            "@organization-type": "", 
+                            "#text": ""
+                        }
+                    }
+                }
+             , 
+            "date-work-end-agreed": "", 
+            "@last-updated-datetime": "", 
+            "date-contractsigned": " 'FECHA_FIRMA_CONTRATO' ", 
+            "award-line-items":  
+                {
+                    "per-unit-award": "", 
+                    "id": "", 
+                    "quantity": ""
+                }
+             , 
+            "date-award": " 'FECHAESTADOADJUDICADO' "
+        }, 
+        "@generated-datetime": " 'FECHACREACION' ", 
+        "meta": {
+            "opencontract-organization-contact": "", 
+            "category": " 'TIPO_CONTRATO' ", 
+            "sector": "",
+            "description": " 'DETALLE_OBJETO' ", 
+            "title": "", 
+            "performance-location": {
+                 "@encoding": "",
+                "#text": ""
+            },
+            "opencontract-organization-id": {
+                "@organization-type": "", 
+                "#text": " 'NIT_ENTIDAD' "
+            }, 
+            "opencontract-id": " 'NUMERO_CONSTANCIA' ", 
+            "currency": "", 
+            "url": " 'url' ",
+            "@last-updated-datetime": "", 
+            "line-item":  
+                {
+                    "id": " 'ID_OBJETO_CONTRATO' ", 
+                    "description": " 'OBJETO_CONTRATO' "
+                }
+             
+        }, 
+        "performance": {
+            "date-work-commence-actual": " 'FECHAESTADOTERMANORMALDESPCONV_1' ", 
+            "@last-updated-datetime": "", 
+            "work-item":  
+                {
+                    "date-work-item": "", 
+                    "ref": "", 
+                    "work-item-line-items":  
+                        {
+                            "id": "", 
+                            "quantity": ""
+                        }
+                     , 
+                    "type-work-item": "", 
+                    "description": ""
+                }
+             , 
+            "date-work-end-actual": "", 
+            "payment":  
+                {
+                    "description": "", 
+                    "disbursement-channel": "", 
+                    "value": "", 
+                    "date-transaction": "", 
+                    "currency": "", 
+                    "date-value": "", 
+                    "ref": "", 
+                    "transaction-type": ""
+                }
+             
+        }, 
+        "termination": {
+            "termination-code": " 'ESTADO_PROCESO' ", 
+            "date-termination": " 'FECHAESTADODESCARTADO'   |  'FECHAESTADOTERMANORMALDESPCONV'  |  'FECHAESTADOTERMANORMALDESPCONV_2' ", 
+            "@last-updated-datetime": "", 
+            "termination-description": ""
+        }, 
+        "document":  
+            {
+                "url": "", 
+                "category": "", 
+                "format": "", 
+                "language": "", 
+                "title": ""
+            }
+         
+    }
+}

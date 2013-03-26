@@ -1,0 +1,91 @@
+{
+    "performance": {
+        "paymentdisbursement-channel": "", 
+        "paymentdescription": "", 
+        "paymentdate-transaction": "", 
+        "date-work-commence-actual": "", 
+        "date-work-end-actual": "", 
+        "paymenttransaction-type": "", 
+        "@last-updated-datetime": "", 
+        "paymentcurrency": "", 
+        "paymentvalue": "", 
+        "paymentdate-value": "", 
+        "paymentref": ""
+    }, 
+    "meta": {
+        "opencontract-organization-contact": "", 
+        "category": "", 
+        "description": "contract_description", 
+        "sector": "major_sector", 
+        "title": "project_name", 
+        "performance-location": "", 
+        "line-itemdescription": "", 
+        "line-itemid": "product_line", 
+        "opencontract-id": "project_id", 
+        "currency": "", 
+        "@last-updated-datetime": "", 
+        "opencontract-organization-id#text": "wb.opencontract-organization 'id' ", 
+        "opencontract-organization-id@organization-type": "contractor"
+    }, 
+    "termination": {
+        "termination-code": "", 
+        "date-termination": "", 
+        "@last-updated-datetime": "", 
+        "termination-description": ""
+    }, 
+    "organization": {
+        "contactcountry": "supplier_country_code | borrower_country_code", 
+        "name": "supplier", 
+        "language": "", 
+        "contactlegal-representative": "", 
+        "contactmailing-address": "", 
+        "contactregion": "", 
+        "contactemail": "", 
+        "currency": "", 
+        "contacturl": "", 
+        "contacttelephone": "", 
+        "id": "", 
+        "contactperson-name": ""
+    }, 
+    "bid": {
+        "budget-line-itemsid": "", 
+        "date-work-end-scheduled": "", 
+        "budget-line-itemsquantity": "", 
+        "date-closing": "", 
+        "budget-line-itemsper-unit-budget": "", 
+        "@last-updated-datetime": "", 
+        "procuring-on-behalf": "", 
+        "total-budget": "", 
+        "sme-friendly": "", 
+        "date-opening": "", 
+        "contract-term": "", 
+        "date-clarification": "", 
+        "procurement-type": "", 
+        "date-work-commence-scheduled": "", 
+        "CPV": ""
+    }, 
+    "document": {
+        "url": "", 
+        "category": "", 
+        "format": "", 
+        "language": "", 
+        "title": ""
+    }, 
+    "award": {
+        "award-line-itemsid": "", 
+        "selection-method": "procurement_method", 
+        "award-line-itemsquantity": "", 
+        "date-work-commence-agreed": "", 
+        "total-award": "total_contract_amount", 
+        "date-work-end-agreed": "", 
+        "contractawarded-contract-document-id": "wb_contract_number", 
+        "@last-updated-datetime": "", 
+        "contractsignatory-name": "", 
+        "award-line-itemsper-unit-award": "", 
+        "recipientopencontract-organization-contact": "", 
+        "date-contractsigned": "contract_signing_date", 
+        "date-award": "", 
+        "opencontract-organization-id#text": "supplier.opencontract-organization 'id' ", 
+        "opencontract-organization-id@organization-type": "supplier"
+    }
+}

@@ -1,0 +1,93 @@
+{
+    "performance": {
+        "paymentdisbursement-channel": "", 
+        "paymentdescription": "", 
+        "paymentdate-transaction": "", 
+        "date-work-commence-actual": "", 
+        "date-work-end-actual": "", 
+        "paymenttransaction-type": "", 
+        "@last-updated-datetime": "", 
+        "paymentcurrency": "", 
+        "paymentvalue": "", 
+        "paymentdate-value": "", 
+        "paymentref": ""
+    }, 
+    "meta": {
+        "opencontract-organization-contact": "", 
+        "category": " 'FD_CONTRACT_AWARD'  '@CTYPE' ", 
+        "description": " 'FD_CONTRACT_AWARD'  'OBJECT_CONTRACT_INFORMATION_CONTRACT_AWARD_NOTICE'  'SHORT_CONTRACT_DESCRIPTION' ", 
+        "sector": "", 
+        "title": " 'FD_CONTRACT_AWARD'  'OBJECT_CONTRACT_INFORMATION_CONTRACT_AWARD_NOTICE'  'TITLE_CONTRACT' ", 
+        "url": " 'FD_CONTRACT_AWARD'  'CONTRACTING_AUTHORITY_INFORMATION'  'NAME_ADDRESSES_CONTACT_CONTRACT_AWARD'  'INTERNET_ADDRESSES_CONTRACT_AWARD'  'URL_GENERAL' ", 
+        "line-itemdescription": "", 
+        "line-itemid": "", 
+        "opencontract-organization-id#text": "", 
+        "currency": " 'FD_CONTRACT_AWARD'  'AWARD_OF_CONTRACT'  'CONTRACT_VALUE_INFORMATION'  'COSTS_RANGE_AND_CURRENCY_WITH_VAT_RATE'  '@CURRENCY' ", 
+        "@last-updated-datetime": " 'SYSTEM'  'SYSTEM_NOTICE_STATE_CHANGE_DATE' ", 
+        "performance-location@encoding": "", 
+        "opencontract-id": " 'SYSTEM'  'NOTICE_ID' ", 
+        "opencontract-organization-id@organization-type": "", 
+        "performance-location#text": " 'FD_CONTRACT_AWARD'  'OBJECT_CONTRACT_INFORMATION_CONTRACT_AWARD_NOTICE'  'DESCRIPTION_CONTRACT_INFORMATION'  'LOCATION_NUTS' "
+    }, 
+    "termination": {
+        "termination-code": "", 
+        "date-termination": "", 
+        "@last-updated-datetime": "", 
+        "termination-description": ""
+    }, 
+    "organization": {
+        "contactcountry": "['FD_CONTRACT_AWARD']['CONTRACTING_AUTHORITY_INFORMATION']['NAME_ADDRESSES_CONTACT_CONTRACT_AWARD']['CA_CE_CONCESSIONAIRE_PROFILE']['COUNTRY']['@VALUE']", 
+        "name": "['SYSTEM']['BUYER_GROUP_NAME']", 
+        "language": "@LG", 
+        "contactlegal-representative": "", 
+        "contactmailing-address": "['FD_CONTRACT_AWARD']['CONTRACTING_AUTHORITY_INFORMATION']['NAME_ADDRESSES_CONTACT_CONTRACT_AWARD']['CA_CE_CONCESSIONAIRE_PROFILE']['ADDRESS']", 
+        "contactregion": "['FD_CONTRACT_AWARD']['CONTRACTING_AUTHORITY_INFORMATION']['NAME_ADDRESSES_CONTACT_CONTRACT_AWARD']['CA_CE_CONCESSIONAIRE_PROFILE']['COUNTY']", 
+        "contactemail": "['FD_CONTRACT_AWARD']['CONTRACTING_AUTHORITY_INFORMATION']['NAME_ADDRESSES_CONTACT_CONTRACT_AWARD']['CA_CE_CONCESSIONAIRE_PROFILE']['E_MAIL']", 
+        "currency": "", 
+        "contacturl": "['FD_CONTRACT_AWARD']['CONTRACTING_AUTHORITY_INFORMATION']['NAME_ADDRESSES_CONTACT_CONTRACT_AWARD']['INTERNET_ADDRESSES_CONTRACT_AWARD']['URL_BUYER']", 
+        "contacttelephone": "['FD_CONTRACT_AWARD']['CONTRACTING_AUTHORITY_INFORMATION']['NAME_ADDRESSES_CONTACT_CONTRACT_AWARD']['CA_CE_CONCESSIONAIRE_PROFILE']['PHONE']", 
+        "id": "['SYSTEM']['BUYER_GROUP_ID']", 
+        "contactperson-name": "['FD_CONTRACT_AWARD']['CONTRACTING_AUTHORITY_INFORMATION']['NAME_ADDRESSES_CONTACT_CONTRACT_AWARD']['CA_CE_CONCESSIONAIRE_PROFILE']['CONTACT_POINT']"
+    }, 
+    "bid": {
+        "budget-line-itemsid": "", 
+        "procurement-type": "", 
+        "date-work-end-scheduled": "", 
+        "budget-line-itemsquantity": "", 
+        "date-closing": "", 
+        "budget-line-itemsper-unit-budget": "", 
+        "@last-updated-datetime": "", 
+        "procuring-on-behalf": " 'FD_CONTRACT_AWARD'  'CONTRACTING_AUTHORITY_INFORMATION'  'TYPE_AND_ACTIVITIES_AND_PURCHASING_ON_BEHALF'  'PURCHASING_ON_BEHALF'  '@VALUE' ", 
+        "total-budget": "", 
+        "date-opening": "", 
+        "contract-term": "", 
+        "date-clarification": "", 
+        "sme-friendly": " 'FD_CONTRACT_AWARD'  'PROCEDURE_DEFINITION_CONTRACT_AWARD_NOTICE'  'IS_FLAGGED_AS_SME_FRIENDLY' ", 
+        "date-work-commence-scheduled": "", 
+        "CPV": " 'FD_CONTRACT_AWARD'  'OBJECT_CONTRACT_INFORMATION_CONTRACT_AWARD_NOTICE'  'CPV'  'CPV_MAIN'  'CPV_CODE'  '@CODE' "
+    }, 
+    "document": {
+        "url": " 'FD_CONTRACT'  'DOCUMENTS  'DOCUMENT'  'DOCUMENT_URL' ", 
+        "category": "", 
+        "format": "", 
+        "language": "", 
+        "title": " 'FD_CONTRACT'  'DOCUMENTS  'DOCUMENT'  'DOCUMENT_TITLE' "
+    }, 
+    "award": {
+        "award-line-itemsid": "", 
+        "selection-method": " 'FD_CONTRACT_AWARD'  'PROCEDURE_DEFINITION_CONTRACT_AWARD_NOTICE'  'AWARD_CRITERIA_CONTRACT_NOTICE_INFORMATION'  'AWARD_CRITERIA_DETAIL' ", 
+        "award-line-itemsquantity": "", 
+        "date-work-commence-agreed": " 'FD_CONTRACT_AWARD'  'OBJ_DATE'  'YEAR' ", 
+        "total-award": " 'FD_CONTRACT_AWARD'  'AWARD_OF_CONTRACT'  'CONTRACT_VALUE_INFORMATION'  'COSTS_RANGE_AND_CURRENCY_WITH_VAT_RATE'  'VALUE_COST' ", 
+        "date-work-end-agreed": " 'FD_CONTRACT_AWARD'  'OBJECT_CONTRACT_ONTRACT_AWARD_NOTICE'  'PERIOD_WORK_DATE_STARTING'  'INTERVAL_DATE'  'END_DATE'  'YEAR' ", 
+        "contractawarded-contract-document-id": " 'FD_CONTRACT'  'AWARD_OF_CONTRACT'  'CONTRACT_NUMBER' ", 
+        "@last-updated-datetime": "", 
+        "contractsignatory-name": "", 
+        "award-line-itemsper-unit-award": "", 
+        "recipientopencontract-organization-contact": "", 
+        "date-contractsigned": " 'FD_CONTRACT'  'AWARDONTRACT'  'CONTRACT_AWARD_DATE'  'YEAR' ", 
+        "date-award": "", 
+        "opencontract-organization-id#text": "", 
+        "opencontract-organization-id@organization-type": ""
+    }
+}

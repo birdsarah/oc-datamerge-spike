@@ -1,0 +1,18 @@
+{
+    "opencontract-organization": {
+        "currency": "", 
+        "contact": {
+            "person-name": "", 
+            "mailing-address": "", 
+            "url": "", 
+            "country": "supplier_country_code | borrower_country_code", 
+            "region": "", 
+            "telephone": "", 
+            "legal-representative": "", 
+            "email": ""
+        }, 
+        "id": "", 
+        "language": "", 
+        "name": "supplier"
+    }
+}
