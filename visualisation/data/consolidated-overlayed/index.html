@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Overlayed</title>
+        <script type="text/javascript" src="/d3/d3.v3.min.js"></script>
+        <style>
+            svg {
+                margin: 25px 25px 0 25px;
+                display: absolute;
+                top: 0;
+                left: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <script type="text/javascript">
+
+            var cellSize = 30,
+                itemsPerColumn = 5,
+                blockheight = cellSize * itemsPerColumn,
+                width = 1200,
+                height = 70 + blockheight,
+                //initializes blockx & blockwidth which is used in loops to store prev
+                blockx = 0,
+                blockwidth = 0,
+                requiredblocks = ['World Bank',
+                  'Colombia',
+                  'Philippines Awards',
+                  'Philippines Bids',
+                  'UK Bids',
+                  'UK Awards',
+                  'US (Partial)'];
+
+            function getRow(id) {
+                row =  id % itemsPerColumn;
+                return row;
+            }
+
+            function getColumn(id) {
+                return Math.floor(id / itemsPerColumn);
+            }
+
+            function getBlockWidth(elements) {
+                elementcount = elements.length;
+                numberofcolumns = Math.ceil(elementcount/itemsPerColumn);
+                blockwidth = numberofcolumns * cellSize;
+                return blockwidth
+            }
+
+            function getQuestionColor(question) {
+                questioncolor = "none"
+                if (question['hasmap'] === "True") {
+                    questioncolor = "#6FA2FF";
+                }
+                if (!question.hasOwnProperty('hasmap')) {
+                    questioncolor = "#FFD48E";
+                }
+                return questioncolor
+            }
+
+            d3.json("consolidated/alldata.json", function(error, json){
+            
+                dataset = d3.entries(json);
+                filtereddata = [];
+                for (var i=0; i < dataset.length; i++) {
+                    if (requiredblocks.indexOf(dataset[i].key) >= 0) {
+                        filtereddata.push(dataset[i])
+                    }                     
+                }
+                
+                var questionblock = d3.select("body")
+                    .append("svg")
+                    .attr("width", width)
+                    .attr("height", height)
+                    .selectAll(".questionblock")
+                    .data(filtereddata)
+                    .enter().append("g")
+                    .attr({
+                        "class": (function(d) { return "questionblock" + " " + d.key }),
+                    })
+
+                var addlayer = questionblock.selectAll(".added")
+                    .data(function(d) { return d.value })
+                    .enter().append("g")
+                    .attr({
+                        "class": (function(d) { return "addlayer" + " " + d.key }),
+                        "transform": (function(d, i) { amount = i*150; return "translate(" + amount +", 25)" })
+                    })
+     
+             addlayer.append("text")
+                .attr("transform", (function() {var h = blockheight + 25; return "translate(0, " + h +")"; }))
+                .text(function(d) { var name = d.name; 
+                                 if (name == 'extra') {
+                                    name = '';   
+                                 }
+                                 return name; 
+                                 }
+                 );
+                    
+                addlayer.selectAll(".question")
+                    .data(function(d) { return d.children })
+                    .enter().append("rect")
+                    .attr({
+                        "class": "question",
+                        "x": (function(d, i) { return cellSize*getColumn(i) }),
+                        "y": (function(d, i) { return blockheight - cellSize*(getRow(i)+1) }),
+                        "width": cellSize,
+                        "height": cellSize,
+                        "fill": getQuestionColor,
+                        "fill-opacity": ".35",
+                        "stroke": "#eee",
+                        "stroke-weight": "1px"
+                    });
+                
+            });
+        </script>
+    </body>
+</html>
+

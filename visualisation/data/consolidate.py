@@ -18,7 +18,8 @@ def flattendict(tobeflat, root=None, tempdict=None):
         root = ''
     for k, v in tobeflat.iteritems():
         if type(v) != dict:
-            tempdict.update({root+k: v})
+            newkey = "%s__%s" %(root, k)
+            tempdict.update({newkey: v})
         else:
             flattendict(v, root=k, tempdict=tempdict)
     return tempdict

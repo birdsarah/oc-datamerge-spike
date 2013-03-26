@@ -200,7 +200,7 @@
                             "@CODE": "opencontract-activity['bid']['cpv']"
                         }
                     }
-                },
+                }
             }, 
             "PERIOD_WORK_DATE_STARTING": {
                 "MONTHS": "opencontract-activity['bid']['contract-term']", 
