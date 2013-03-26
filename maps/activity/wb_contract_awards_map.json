@@ -39,7 +39,7 @@
                         "opencontract-organization-id": {
                             "@organization-type": "supplier", 
                             "#text": "supplier.opencontract-organization['id']"
-                        },
+                        }
                     }
                 }
             ], 

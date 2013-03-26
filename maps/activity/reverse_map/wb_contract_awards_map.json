@@ -1,5 +1,4 @@
 {
-    "wb": {
         "supplier_country_code": "opencontract-organization['contact']['country']", 
         "borrower_country_code": "opencontract-organization['contact']['country']", 
         "project_name": "opencontract-activity['meta']['title']", 
@@ -20,5 +19,4 @@
         "total_contract_amount": "opencontract-activity['award']['total-award']", 
         "contract_description": "opencontract-activity['meta']['description']", 
         "wb_contract_number": "opencontract-activity['award']['contract']['awarded-contract-document-id']"
-    }
 }
