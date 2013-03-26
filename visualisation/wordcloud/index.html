@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Word Cloud</title>
+        <script type="text/javascript" src="/d3/d3.v3.min.js"></script>
+        <script type="text/javascript" src="/d3/d3.layout.cloud.js"></script>
+        <style>
+        </style>
+    </head>
+    <body>
+        <script type="text/javascript">
+            var wc1 = [{'size': 13, 'text': 'Goods'},
+                         {'size': 5, 'text': 'Civil Works'},
+                         {'size': 3, 'text': 'Otro Tipo de Contrato'},
+                         {'size': 62, 'text': 'Services'},
+                         {'size': 10, 'text': 'Compraventa'},
+                         {'size': 18, 'text': 'Supplies'},
+                         {'size': 43, 'text': 'Obra'},
+                         {'size': 28, 'text': 'Prestacion de Servicios'},
+                         {'size': 14, 'text': 'Works'},
+                         {'size': 11, 'text': 'Suministro'}]
+
+            var wc2 = [{'size': 75, 'text': 'Services'},
+                         {'size': 25, 'text': 'Supplies'},
+                         {'size': 52, 'text': 'Works'},
+                         {'size': 11, 'text': 'Goods'}]
+
+
+            
+          var fill = d3.scale.category20();
+
+          d3.layout.cloud().size([600, 600])
+              .words(wc1)
+              .rotate(function() { return ~~(Math.random() * 2) * 90; })
+              .font("Impact")
+              .fontSize(function(d) { console.log(d.text + d.size); return d.size; })
+              .on("end", draw) 
+              .start();
+
+          function draw(words) {
+            d3.select("body").append("svg")
+                .attr("width", 600)
+                .attr("height", 600)
+                .append("g")
+                .attr("transform", "translate(300,300)")
+                .selectAll("text")
+                .data(words)
+                .enter().append("text")
+                .style("font-size", function(d) { return d.size + "px"; })
+                .style("font-family", "Impact")
+                .style("fill", function(d, i) { return fill(i); })
+                .attr("text-anchor", "middle")
+                .attr("transform", function(d) {
+                  return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
+                })
+                .text(function(d) { return d.text; });
+          }
+        </script>
+    </body>
+</html>
+
