@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Open Contracting - Draft Standard Spike - Report</title>
+        <script type="text/javascript" src="/d3/d3.v3.min.js"></script>
+        <script type="text/javascript" src="general_functions.js"></script>
+        <style>
+            html {
+                background: gray;
+                font-family: "Helvetica Neue",Helvetica,Arial,freesans,sans-serif;
+                font-size: 14px;
+            }
+            body {
+                width: 80%;
+                min-width: 1250px;
+                margin: auto;
+                padding: 1.5em;
+                background: white;
+            }
+            svg {
+                margin: 1.5em 1.5em 0 1.5em;
+            }
+            .overlayed > svg {
+                display: absolute;
+                top: 0;
+                left: 0;
+            }
+            pre {
+                height: 600px;
+                overflow: auto;
+                color: #268bd2;
+                background-color: #fdf6e3;
+                margin: 0;
+                padding: .5em;
+            }
+            pre, text {font-size: .9em;}
+            .key {color: #859900}
+            .string {color: #2aa198}
+            .title {
+                font-size: 1.1em;
+                font-weight: bold;
+            }
+            rect:hover {opacity: 0.5;}
+        </style>
+    </head>
+    <body>
+        <h1>Draft Standard Investigation Report</h1>
+        <h3>Welcome to the Open Contracting Data Spike</h3>
+
+        <p>The objective was to spend 5 days exploring the feasibility of
+        developing a common standard for open contracting data and scoping the
+        opportunities and challenges.</p>
+
+        <p>This work was "supply-side" only, meaning that it looked at a number of
+        available data sets to examine the problem rather than looking at the
+        "demand-side" - what information do stakeholders want.</p>
+
+        <p>In addition to examining feasibility, opportunities and challenges, a
+        draft standard was produced in order to provide something on paper for
+        people to engage with - the draft included here is in no way an
+        accepted or agreed standard, mearly a talking point.</p>
+
+        <p>This work was presented at the ODI with
+        <a href="http://www.open-contracting.org/">http://www.open-contracting.org/</a> on March 28th 2013.</p>
+
+        <p>The following data was looked at during this project:
+            <ul>
+                <li>UK Contracts Finder - <a href="https://online.contractsfinder.businesslink.gov.uk/">https://online.contractsfinder.businesslink.gov.uk/</a></li>
+                <li>Philippines - <a href="http://www.philgeps.gov.ph">http://www.philgeps.gov.ph</a></li>
+                <li>USA Spending - <a href="http://www.usaspending.gov/">http://www.usaspending.gov/</a></li>
+                <li>Colombia - <a href="https://www.contratos.gov.co/consultas/inicioConsulta.do">https://www.contratos.gov.co/consultas/inicioConsulta.do</a></li>
+                <li>World Bank - <a href="https://finances.worldbank.org/Procurement/Major-Contract-Awards/kdui-wcs3">https://finances.worldbank.org/Procurement/Major-Contract-Awards/kdui-wcs3</a></li>
+                <li>Guinea - <a href="http://www.contratsminiersguinee.org/">http://www.contratsminiersguinee.org/</a></li>
+            </ul>
+        </p>
+
+        <p>The Guinea data was not used in the mapping as it was too disparate to
+        facilitate the process that we were trying to do. However, bringing in
+        extractive industry and other such disparate data will be an important
+        part of future work. The US data was only partially looked at,
+        specifically to look at the transaction data available.</p>
+
+        <p>Additional information including the presented presentation,
+        and the code used to produce this report is available on Github -
+        <a href="https://github.com/birdsarah/oc-datamerge-spike">https://github.com/birdsarah/oc-datamerge-spike</a></p>
+
+        <h2>Draft Standard</h2>
+        <p>Based on the very preliminary investigation, the following draft
+        standard was created, intended only as a starting point for
+        discussion.</p>
+        <div id="standard"></div>
+
+        <h2>Visualised Structure</h2>
+        <p>This structure can be organized into blocks of data that allow us to visualize the different data points that
+        different data sets contain. Hovering over a square will show a key that can be referenced in the standard above.</p>
+        <div id="blank"></div>
+        
+        <h2>Coverage</h2>
+        
+        <h3>Summary</h3>
+        <p>We took all the datasets and overlayed which data set had which data points to build a map of the data coverage.
+        The darker the blue, the more datasets had that particular data point. This shows us that Organization, Meta, Bid,
+        and Award information is more commonly available in the datsets we examined than performance and termination data.</p>
+        <div id="overlayed"></div>
+
+        <h3>Detail</h3>
+        <p>Here we look at which fields each dataset contains. 
+        <ul>
+            <li>The blue squares are where a proposed field is already available in the existing data, </li>
+            <li>the orange squares are those fields that are available in the dataset, but are not used in the proposed standard,</li>
+            <li>and the gray squares are where the standard data point is not available in the data set.</li>
+    </ul>
+        </p>
+        <div id="wextra"></div>
+    </body>
+        <script type="text/javascript" src="standard.js"></script>
+        <script type="text/javascript" src="blank.js"></script>
+        <script type="text/javascript" src="overlayed.js"></script>
+        <script type="text/javascript" src="wextra.js"></script>
+</html>
+
