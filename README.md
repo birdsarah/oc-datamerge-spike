@@ -7,12 +7,12 @@ Contents
 --------
 At the top level, the presentation is available
 
-/draft-standard - contains the created initial standards as a working document for discussion
-/maps - contains the mapping between the draft standard and the data sources that were used 
-/merge-spike - step one of doing a full data merge with the generated maps (currently only does one field)
-/raw-data - the raw data used and the web scraping code where it was needed
-/utils - random snippets of python used to work with the data
-/visualization - using D3.js to make maps of the standards 
+- /draft-standard - contains the created initial standards as a working document for discussion
+- /maps - contains the mapping between the draft standard and the data sources that were used 
+- /merge-spike - step one of doing a full data merge with the generated maps (currently only does one field)
+- /raw-data - the raw data used and the web scraping code where it was needed
+- /utils - random snippets of python used to work with the data
+- /visualization - using D3.js to make maps of the standards 
 
 Code
 ----
